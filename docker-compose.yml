@@ -19,7 +19,7 @@ services:
     environment:
       - POSTGRES_USER=username
       - POSTGRES_PASSWORD=1234
-      - POSTGRES_DB=database
+      - POSTGRES_DB=retinoblastoma
 
 volumes:
   postgres_data:
