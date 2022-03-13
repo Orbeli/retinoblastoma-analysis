@@ -3,7 +3,7 @@ Projeto voltado para o reconhecimento do câncer ocular retinoblastoma através,
 
 ---
 ## Requisitos
-Projeto pode ser instalado com [Docker](https://www.docker.com/), caso opte por não usá-lo se atente ao requisitos:
+Projeto pode ser instalado com [Docker](https://www.docker.com/), caso opte por não usá-lo se atente aos requisitos:
 1) Python 3.8
 2) PostgreSQL 12
 
