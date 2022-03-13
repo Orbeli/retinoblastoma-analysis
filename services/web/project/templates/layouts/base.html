@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        {% block head %}
+        <title>{% block title %}{% endblock %} - Diocese de Bauru</title>
+
+        <!-- Metas -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Robots -->
+        <meta name="rating" content="General">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="revisit-after" content="1">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="icon.png">
+
+        <!-- Load css -->
+        <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="static/css/custom.css">
+
+        <!-- Font Awesome css -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+        {% endblock %}
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-dark bg-diocese">
+                <div class="container d-flex justify-content-between">
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Diocese de Bauru</a>
+                    <div class="navbar-collapse collapse" id="navbarsExample01">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Administração</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Bispos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Congregações</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Notícias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Padres e Diáconos</a>
+                            </li>
+                            <li class="nav-item dropdown" id="hoverParoquia">
+                                <div class="btn-group dropright">
+                                    <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdownParoquia" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Paróquias
+                                    </a>
+                                    <div class="dropdown-menu dropdown-bg" aria-labelledby="dropdownParoquia">
+                                        <a class="dropdown-item dropdown-item-color" href="#">Catedral do Divino Espírito Santo</a>
+                                        <a class="dropdown-item dropdown-item-color" href="#">São Cristóvão - Bauru</a>
+                                        <a class="dropdown-item dropdown-item-color" href="#">Catedral do Divino Espírito Santo</a>
+                                        <a class="dropdown-item" href="#">São Cristóvão - Bauru</a>
+                                        <a class="dropdown-item" href="#">Catedral do Divino Espírito Santo</a>
+                                        <a class="dropdown-item" href="#">São Cristóvão - Bauru</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <div class="btn-group dropright">
+                                    <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdownPastorais" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Pastorais e Movimentos
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownPastorais">
+                                        <a class="dropdown-item" href="#">Catedral do Divino Espírito Santo</a>
+                                        <a class="dropdown-item" href="#">São Cristóvão - Bauru</a>
+                                        <a class="dropdown-item" href="#">Catedral do Divino Espírito Santo</a>
+                                        <a class="dropdown-item" href="#">São Cristóvão - Bauru</a>
+                                        <a class="dropdown-item" href="#">Catedral do Divino Espírito Santo</a>
+                                        <a class="dropdown-item" href="#">São Cristóvão - Bauru</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Seminários</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main role="main">
+            {% block content %}
+            <section class="jumbotron text-center" style="background-image: url(https://images.unsplash.com/photo-1623843305620-5d2553e753e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);">
+                <!-- <div class="container-fluid">
+                    <p class="lead text-muted float-right"><a href="#">Encontre um lugar perto de você</a></p>
+                </div> -->
+            </section>
+
+            {% endblock %}
+        </main>
+
+        <footer class="text-muted">
+            {% block footer %}
+            <div class="container">
+                <div class="container d-flex flex-row justify-content-around p-3">
+                    <a href="#"><img src="" alt="cnbb"></a>
+                    <a href="#"><img src="" alt="vatican news"></a>
+                    <a href="#"><img src="" alt="pascom"></a>
+                    <a href="#"><img src="" alt="setor caridade"></a>
+                </div>
+                <p class="text-center text-muted">@Copyright 2021</p>
+            </div>
+            {% endblock %}
+        </footer>
+        
+        <!-- JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="static/js/jquery-3.6.0.min.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
+        <script src="static/js/custom.js"></script>
+    </body>
+</html>
