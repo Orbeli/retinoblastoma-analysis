@@ -1,5 +1,5 @@
 # Software de Reconhecimento de Imagem para Diagnóstico do Retinoblastoma
-Projeto voltado para o reconhecimento do câncer ocular retinoblastoma através, de uma imagem não clínica do olho humano.
+Projeto voltado para o reconhecimento do câncer ocular retinoblastoma, através de uma imagem não clínica do olho humano.
 
 ---
 ## Requisitos
