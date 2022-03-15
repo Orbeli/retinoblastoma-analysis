@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Jober Desk | Responsive Job Portal Template</title>
+	<title>Retinoblastoma | Análise de imagem</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -28,24 +28,15 @@
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 					<i class="fa fa-bars"></i>
 				</button>
-				<a class="navbar-brand" href="index.html"><img src="media/logo.png" class="logo" alt=""></a>
+				<a class="navbar-brand" href="{{ url_for('home') }}"><img src="media/logo.png" class="logo" alt=""></a>
 			</div>
 			<!-- End Header Navigation -->
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="navbar-menu">
 				<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="login.html">Login</a></li>
-					<li><a href="companies.html">Companies</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse</a>
-						<ul class="dropdown-menu animated fadeOutUp" style="display: none; opacity: 1;">
-							<li class="active"><a href="browse-job.html">Browse Jobs</a></li>
-							<li><a href="company-detail.html">Job Detail</a></li>
-							<li><a href="resume.html">Resume Detail</a></li>
-						</ul>
-					</li>
+					<li><a href="{{ url_for('home') }}">Home</a></li>
+					<li><a href="login.html">Análise</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div>
@@ -65,28 +56,28 @@
 		<div class="container">
 			<div class="col-md-4 col-sm-4">
 				<div class="features-content">
-					<span class="box1"><span aria-hidden="true" class="icon-dial"></span></span>
-					<h3>Create An Account</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore
-						et dolore magna aliqua.</p>
+					<span class="box1"><span aria-hidden="true" class="icon-camera"></span></span>
+					<h3>Tire uma foto</h3>
+					<p>Tire uma foto olhando diretamente para a câmera com o flash ligado, não esquece de manter os
+						olhos abertos</p>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-4">
+				<div class="features-content">
+					<span class="box1"><span aria-hidden="true" class="icon-upload"></span></span>
+					<h3>Faça o envio da fotografia</h3>
+					<p>Faça o envio da fotografia nesta página para realizar uma análise pelo sistema de reconhecimento
+					</p>
 				</div>
 			</div>
 
 			<div class="col-md-4 col-sm-4">
 				<div class="features-content">
 					<span class="box1"><span aria-hidden="true" class="icon-search"></span></span>
-					<h3>Search Desired Job</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore
-						et dolore magna aliqua.</p>
-				</div>
-			</div>
-
-			<div class="col-md-4 col-sm-4">
-				<div class="features-content">
-					<span class="box1"><span aria-hidden="true" class="icon-printer"></span></span>
-					<h3>Send Your Resume</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore
-						et dolore magna aliqua.</p>
+					<h3>Veja os resultados</h3>
+					<p>Agora é aguardar o resultado, mas lembre-se que
+						somente um exame feito por um especialista pode diagnosticar com precisão a doença</p>
 				</div>
 			</div>
 
@@ -124,24 +115,22 @@
 	<section class="jobs">
 		<div class="container">
 			<div class="row heading">
-				<h2>Find Popular Jobs</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+				<h2>Tecnologias Utilizadas</h2>
 			</div>
 			<div class="companies">
 				<div class="company-list">
 					<div class="row">
 						<div class="col-md-2 col-sm-2">
 							<div class="company-logo">
-								<img src="media/google.png" class="img-responsive" alt="" />
+								<img src="media/python.png" class="img-responsive" alt="" />
 							</div>
 						</div>
 						<div class="col-md-10 col-sm-10">
 							<div class="company-content">
-								<h3>IOS Developer<span class="full-time">Full Time</span></h3>
-								<p><span class="company-name"><i class="fa fa-briefcase"></i>Google</span><span
-										class="company-location"><i class="fa fa-map-marker"></i> 07th Avenue, New York,
-										NY, United States</span><span class="package"><i
-											class="fa fa-money"></i>$22,000-$50,000</span></p>
+								<h3>Python 3<a href="https://www.python.org/doc/" target="_blank"><span
+											class="freelance">Documentação</span></h3>
+								<p><span class="company-location"><i class="fa fa-map-marker"></i>Linguagem de
+										programação utilizada no desenvolvimento</span><span class="package"></p>
 							</div>
 						</div>
 					</div>
@@ -151,16 +140,15 @@
 					<div class="row">
 						<div class="col-md-2 col-sm-2">
 							<div class="company-logo">
-								<img src="media/microsoft.png" class="img-responsive" alt="" />
+								<img src="media/opencv.png" class="img-responsive" alt="" />
 							</div>
 						</div>
 						<div class="col-md-10 col-sm-10">
 							<div class="company-content">
-								<h3>Back-End developer<span class="part-time">Part Time</span></h3>
-								<p><span class="company-name"><i class="fa fa-briefcase"></i>Microsoft</span><span
-										class="company-location"><i class="fa fa-map-marker"></i> 7th Avenue, New York,
-										NY, United States</span><span class="package"><i
-											class="fa fa-money"></i>$20,000-$52,000</span></p>
+								<h3>OpenCV<a href="https://docs.opencv.org/4.x/" target="_blank"><span
+											class="freelance">Documentação</span></h3>
+								<p><span class="company-location"><i class="fa fa-map-marker"></i>Biblioteca utilizada
+										para o processamento de imagens</span><span class="package"></p>
 							</div>
 						</div>
 					</div>
@@ -170,16 +158,15 @@
 					<div class="row">
 						<div class="col-md-2 col-sm-2">
 							<div class="company-logo">
-								<img src="media/apple.png" class="img-responsive" alt="" />
+								<img src="media/postgres.png" class="img-responsive" alt="" />
 							</div>
 						</div>
 						<div class="col-md-10 col-sm-10">
 							<div class="company-content">
-								<h3>UI/UX Designer<span class="freelance">Freelance</span></h3>
-								<p><span class="company-name"><i class="fa fa-briefcase"></i>Apple</span><span
-										class="company-location"><i class="fa fa-map-marker"></i> 7th Avenue, New York,
-										NY, United States</span><span class="package"><i
-											class="fa fa-money"></i>$22,000-$50,000</span></p>
+								<h3>PostgreSQL<a href="https://www.postgresql.org/docs/" target="_blank"><span
+											class="freelance">Documentação</span></h3>
+								<p><span class="company-location"><i class="fa fa-map-marker"></i>Banco de dados
+										utilizado no sistema</span><span class="package"></p>
 							</div>
 						</div>
 					</div>
@@ -189,167 +176,17 @@
 					<div class="row">
 						<div class="col-md-2 col-sm-2">
 							<div class="company-logo">
-								<img src="media/wipro.png" class="img-responsive" alt="" />
+								<img src="media/docker.png" class="img-responsive" alt="" />
 							</div>
 						</div>
 						<div class="col-md-10 col-sm-10">
 							<div class="company-content">
-								<h3>IOS developer<span class="internship">Intership</span></h3>
-								<p><span class="company-name"><i class="fa fa-briefcase"></i>Wipro</span><span
-										class="company-location"><i class="fa fa-map-marker"></i> 8th Avenue, New York,
-										NY, United States</span><span class="package"><i
-											class="fa fa-money"></i>$24,000-$52,000</span></p>
+								<h3>Docker<a href="https://docs.docker.com/" target="_blank"><span
+											class="freelance">Documentação</span></a></h3>
+								<p><span class="company-location"><i class="fa fa-map-marker"></i>Tecnologia utilizada para conteinerização do projeto</span><span class="package"></p>
 							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="company-list">
-					<div class="row">
-						<div class="col-md-2 col-sm-2">
-							<div class="company-logo">
-								<img src="media/twitter.png" class="img-responsive" alt="" />
-							</div>
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<div class="company-content">
-								<h3>Marketing Holder<span class="full-time">Full Time</span></h3>
-								<p><span class="company-name"><i class="fa fa-briefcase"></i>Twitter</span><span
-										class="company-location"><i class="fa fa-map-marker"></i> 4th Avenue, New York,
-										NY, United States</span><span class="package"><i
-											class="fa fa-money"></i>$24,000-$48,000</span></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<input type="button" class="btn brows-btn" value="Brows All Jobs" />
-			</div>
-		</div>
-	</section>
-
-	<section class="testimonials dark">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div id="testimonial-slider" class="owl-carousel">
-						<div class="testimonial">
-							<div class="pic">
-								<img src="media/client-1.jpg" alt="">
-							</div>
-							<p class="description">
-								" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi eligendi
-								facilis itaque minus non odio, quaerat ullam unde voluptatum? "
-							</p>
-							<h3 class="testimonial-title">williamson</h3>
-							<span class="post">Web Developer</span>
-						</div>
-
-						<div class="testimonial">
-							<div class="pic">
-								<img src="media/client-2.jpg" alt="">
-							</div>
-							<p class="description">
-								" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi eligendi
-								facilis itaque minus non odio, quaerat ullam unde voluptatum? "
-							</p>
-							<h3 class="testimonial-title">kristiana</h3>
-							<span class="post">Web Designer</span>
-						</div>
-
-						<div class="testimonial">
-							<div class="pic">
-								<img src="media/client-3.jpg" alt="">
-							</div>
-							<p class="description">
-								" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi eligendi
-								facilis itaque minus non odio, quaerat ullam unde voluptatum? "
-							</p>
-							<h3 class="testimonial-title">kristiana</h3>
-							<span class="post">Web Designer</span>
-						</div>
-
-						<div class="testimonial">
-							<div class="pic">
-								<img src="media/client-4.jpg" alt="">
-							</div>
-							<p class="description">
-								" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi eligendi
-								facilis itaque minus non odio, quaerat ullam unde voluptatum? "
-							</p>
-							<h3 class="testimonial-title">kristiana</h3>
-							<span class="post">Web Designer</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="pricind">
-		<div class="container">
-			<div class="col-md-4 col-sm-4">
-				<div class="package-box">
-					<div class="package-header">
-						<i class="fa fa-cog" aria-hidden="true"></i>
-						<h3>Professional</h3>
-					</div>
-					<div class="package-info">
-						<ul>
-							<li>3 Designs</li>
-							<li>3 PSD Designs</li>
-							<li>4 color Option</li>
-							<li>10GB Disk Space</li>
-							<li>Full Support</li>
-						</ul>
-					</div>
-					<div class="package-price">
-						<h2><sup>$ </sup>10<sub>/Month</sub></h2>
-					</div>
-					<button type="submit" class="btn btn-package">Sign Up</button>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-4">
-				<div class="package-box">
-					<div class="package-header">
-						<i class="fa fa-star-half-o" aria-hidden="true"></i>
-						<h3>Standard</h3>
-					</div>
-					<div class="package-info">
-						<ul>
-							<li>3 Designs</li>
-							<li>3 PSD Designs</li>
-							<li>4 color Option</li>
-							<li>10GB Disk Space</li>
-							<li>Full Support</li>
-						</ul>
-					</div>
-					<div class="package-price">
-						<h2><sup>$ </sup>110<sub>/Month</sub></h2>
-					</div>
-					<button type="submit" class="btn btn-package">Sign Up</button>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-4">
-				<div class="package-box">
-					<div class="package-header">
-						<i class="fa fa-cube" aria-hidden="true"></i>
-						<h3>Premium</h3>
-					</div>
-					<div class="package-info">
-						<ul>
-							<li>3 Designs</li>
-							<li>3 PSD Designs</li>
-							<li>4 color Option</li>
-							<li>10GB Disk Space</li>
-							<li>Full Support</li>
-						</ul>
-					</div>
-					<div class="package-price">
-						<h2><sup>$ </sup>170<sub>/Month</sub></h2>
-					</div>
-					<button type="submit" class="btn btn-package">Sign Up</button>
 				</div>
 			</div>
 		</div>
@@ -358,42 +195,19 @@
 	<!-- footer start -->
 	<footer>
 		<div class="container">
-			<div class="col-md-3 col-sm-6">
-				<h4>Featured Job</h4>
+			<div class="col-md-6 col-sm-6">
+				<h4>Projeto</h4>
 				<ul>
-					<li><a href="#">Browse Jobs</a></li>
-					<li><a href="#">Premium MBA Jobs</a></li>
-					<li><a href="#">Access Database</a></li>
-					<li><a href="#">Manage Responses</a></li>
-					<li><a href="#">Report a Problem</a></li>
-					<li><a href="#">Mobile Site</a></li>
-					<li><a href="#">Jobs by Skill</a></li>
+					<li><a href="https://github.com/Orbeli/retinoblastoma-analysis" target="_blank">Repositório</a></li>
 				</ul>
 			</div>
 
-			<div class="col-md-3 col-sm-6">
-				<h4>Latest Job</h4>
-				<ul>
-					<li><a href="#">Browse Jobs</a></li>
-					<li><a href="#">Premium MBA Jobs</a></li>
-					<li><a href="#">Access Database</a></li>
-					<li><a href="#">Manage Responses</a></li>
-					<li><a href="#">Report a Problem</a></li>
-					<li><a href="#">Mobile Site</a></li>
-					<li><a href="#">Jobs by Skill</a></li>
-				</ul>
-			</div>
-
-			<div class="col-md-3 col-sm-6">
-				<h4>Reach Us</h4>
+			<div class="col-md-6 col-sm-6">
+				<h4>Contato</h4>
 				<address>
 					<ul>
-						<li>1201, Murakeu Market, QUCH07<br>
-							United Kingdon</li>
-						<li>Email: Support@job.com</li>
-						<li>Call: 044 123 458 65879</li>
-						<li>Skype: job@skype</li>
-						<li>FAX: 123 456 85</li>
+						<li><a href="https://www.linkedin.com/in/gabriel-orbeli-436815171/" target="_blank">Linkedin:
+								Gabriel Orbeli</a></li>
 					</ul>
 				</address>
 			</div>
