@@ -33,9 +33,19 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/static/<path:filename>")
-def staticfiles(filename):
-    return send_from_directory(app.config["STATIC_FOLDER"], filename)
+@app.route("/analysis", methods=["GET"])
+def analysis():
+    return render_template("analysis.html")
+
+# Static Routes
+@app.route("/static/css/<path:filename>")
+def static_css_files(filename):
+    return send_from_directory(app.config["STATIC_CSS"], filename)
+
+# Static Routes
+@app.route("/static/js/<path:filename>")
+def static_js_files(filename):
+    return send_from_directory(app.config["STATIC_JS"], filename)
 
 
 @app.route("/media/<path:filename>")
