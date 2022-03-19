@@ -37,10 +37,12 @@ def home():
 def analysis():
     return render_template("analysis.html")
 
+
 # Static Routes
 @app.route("/static/css/<path:filename>")
 def static_css_files(filename):
     return send_from_directory(app.config["STATIC_CSS"], filename)
+
 
 # Static Routes
 @app.route("/static/js/<path:filename>")
@@ -49,7 +51,7 @@ def static_js_files(filename):
 
 
 @app.route("/media/<path:filename>")
-def mediafiles(filename):
+def media_files(filename):
     return send_from_directory(app.config["MEDIA_FOLDER"], filename)
 
 
