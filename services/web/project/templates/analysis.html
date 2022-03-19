@@ -1,120 +1,55 @@
-<!doctype html>
-<html class="no-js" lang="en">
+{% extends "layouts/base.html" %}
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Retinoblastoma | Análise de imagem</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Page title -->
+{% block title %}Análise de imagem{% endblock %}
 
-	<!-- All Plugin Css -->
-	<link rel="stylesheet" href="{{ url_for('static_css_files', filename='plugins.css') }}">
-
-	<!-- Style & Common Css -->
-	<link rel="stylesheet" href="{{ url_for('static_css_files', filename='common.css') }}">
-	<link rel="stylesheet" href="{{ url_for('static_css_files', filename='main.css') }}">
-
-</head>
-
-<body>
-
-	<!-- Navigation Start  -->
-	<nav class="navbar navbar-default navbar-sticky bootsnav">
-
-		<div class="container">
-			<!-- Start Header Navigation -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-					<i class="fa fa-bars"></i>
-				</button>
-				<a class="navbar-brand" href="{{ url_for('home') }}"><img src="media/logo.png" class="logo" alt=""></a>
-			</div>
-			<!-- End Header Navigation -->
-
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="navbar-menu">
-				<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-					<li><a href="{{ url_for('home') }}">Home</a></li>
-					<li><a href="{{ url_for('analysis') }}">Análise</a></li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</div>
-	</nav>
-	<!-- Navigation End  -->
-
-	<!-- Main jumbotron for a primary marketing message or call to action -->
-	<section class="main-banner" style="background:#242c36 url(media/primo_do_je.jpg) no-repeat">
-		<div class="container">
-			<div class="caption">
-				<h2>RETINOBLASTOMA</h2>
+{% block content %}
+<section class="features">
+	<div class="container">
+		<div class="col-md-4 col-sm-4">
+			<div class="features-content">
+				<span class="box1"><span aria-hidden="true" class="icon-camera"></span></span>
+				<h3>Tire uma foto</h3>
+				<p>Tire uma foto olhando diretamente para a câmera com o flash ligado, não esquece de manter os
+					olhos abertos</p>
 			</div>
 		</div>
-	</section>
 
+		<div class="col-md-4 col-sm-4">
+			<div class="features-content">
+				<span class="box1"><span aria-hidden="true" class="icon-upload"></span></span>
+				<h3>Faça o envio da fotografia</h3>
+				<p>Faça o envio da fotografia nesta página para realizar uma análise pelo sistema de reconhecimento
+				</p>
+			</div>
+		</div>
 
-	<section class="features">
-		<div class="container">
-			<div class="col-md-4 col-sm-4">
-				<div class="features-content">
-					<span class="box1"><span aria-hidden="true" class="icon-camera"></span></span>
-					<h3>Tire uma foto</h3>
-					<p>Tire uma foto olhando diretamente para a câmera com o flash ligado, não esquece de manter os
-						olhos abertos</p>
+		<div class="col-md-4 col-sm-4">
+			<div class="features-content">
+				<span class="box1"><span aria-hidden="true" class="icon-search"></span></span>
+				<h3>Veja os resultados</h3>
+				<p>Agora é aguardar o resultado, mas lembre-se que
+					somente um exame feito por um especialista pode diagnosticar com precisão a doença</p>
+			</div>
+		</div>
+	</div>
+</section>
+<form action="{{ url_for('upload_file') }}" method=post enctype=multipart/form-data>
+	<div class="container">
+		<div class="panel">
+			<div class="button_outer">
+				<div class="btn_upload">
+					<input type="file" id="upload_file" name="" accept="image/*" />
+					Selecionar Imagem
 				</div>
-			</div>
-
-			<div class="col-md-4 col-sm-4">
-				<div class="features-content">
-					<span class="box1"><span aria-hidden="true" class="icon-upload"></span></span>
-					<h3>Faça o envio da fotografia</h3>
-					<p>Faça o envio da fotografia nesta página para realizar uma análise pelo sistema de reconhecimento
-					</p>
-				</div>
-			</div>
-
-			<div class="col-md-4 col-sm-4">
-				<div class="features-content">
-					<span class="box1"><span aria-hidden="true" class="icon-search"></span></span>
-					<h3>Veja os resultados</h3>
-					<p>Agora é aguardar o resultado, mas lembre-se que
-						somente um exame feito por um especialista pode diagnosticar com precisão a doença</p>
-				</div>
+				<div class="processing_bar"></div>
+				<div class="success_box"></div>
 			</div>
 		</div>
-	</section>
-	<form action="{{ url_for('upload_file') }}" method=post enctype=multipart/form-data>
-		<div class="container">
-			<div class="panel">
-				<div class="button_outer">
-					<div class="btn_upload">
-						<input type="file" id="upload_file" name=""  accept="image/*" />
-						Selecionar Imagem
-					</div>
-					<div class="processing_bar"></div>
-					<div class="success_box"></div>
-				</div>
-			</div>
-			<div class="error_msg"></div>
-			<div class="uploaded_file_view" id="uploaded_view">
-				<span class="file_remove">X</span>
-			</div>
+		<div class="error_msg"></div>
+		<div class="uploaded_file_view" id="uploaded_view">
+			<span class="file_remove">X</span>
 		</div>
-	</form>
-
-	<!-- footer start -->
-	<footer>
-		<div class="copy-right">
-			Desenvolvido por <a href="https://www.linkedin.com/in/gabriel-orbeli-436815171/" target="_blank">
-				Gabriel Orbeli</a>
-		</div>
-	</footer>
-
-	<script type="text/javascript" src="{{ url_for('static_js_files', filename='jquery.min.js') }}"></script>
-	<script src="{{ url_for('static_js_files', filename='bootstrap.min.js') }}"></script>
-	<script type="text/javascript" src="{{ url_for('static_js_files', filename='owl.carousel.min.js') }}"></script>
-	<script src="{{ url_for('static_js_files', filename='bootsnav.js') }}"></script>
-	<script src="{{ url_for('static_js_files', filename='main.js') }}"></script>
-</body>
-
-</html>
+	</div>
+</form>
+{% endblock %}

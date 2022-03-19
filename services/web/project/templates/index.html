@@ -1,211 +1,147 @@
-<!doctype html>
-<html class="no-js" lang="en">
+{% extends "layouts/base.html" %}
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Retinoblastoma | Análise de imagem</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Page title -->
+{% block title %}Início{% endblock %}
 
-	<!-- All Plugin Css -->
-	<link rel="stylesheet" href="static/css/plugins.css">
-
-	<!-- Style & Common Css -->
-	<link rel="stylesheet" href="static/css/common.css">
-	<link rel="stylesheet" href="static/css/main.css">
-
-</head>
-
-<body>
-
-	<!-- Navigation Start  -->
-	<nav class="navbar navbar-default navbar-sticky bootsnav">
-
-		<div class="container">
-			<!-- Start Header Navigation -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-					<i class="fa fa-bars"></i>
-				</button>
-				<a class="navbar-brand" href="{{ url_for('home') }}"><img src="media/logo.png" class="logo" alt=""></a>
-			</div>
-			<!-- End Header Navigation -->
-
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="navbar-menu">
-				<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-					<li><a href="{{ url_for('home') }}">Home</a></li>
-					<li><a href="{{ url_for('analysis') }}">Análise</a></li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</div>
-	</nav>
-	<!-- Navigation End  -->
-
-	<!-- Main jumbotron for a primary marketing message or call to action -->
-	<section class="main-banner" style="background:#242c36 url(media/sss.jpg) no-repeat">
-		<div class="container">
-			<div class="caption">
-				<h2>RETINOBLASTOMA</h2>
+{% block content %}
+<section class="features">
+	<div class="container">
+		<div class="col-md-4 col-sm-4">
+			<div class="features-content">
+				<span class="box1"><span aria-hidden="true" class="icon-camera"></span></span>
+				<h3>Tire uma foto</h3>
+				<p>Tire uma foto olhando diretamente para a câmera com o flash ligado, não esquece de manter os
+					olhos abertos</p>
 			</div>
 		</div>
-	</section>
 
-	<section class="features">
-		<div class="container">
-			<div class="col-md-4 col-sm-4">
-				<div class="features-content">
-					<span class="box1"><span aria-hidden="true" class="icon-camera"></span></span>
-					<h3>Tire uma foto</h3>
-					<p>Tire uma foto olhando diretamente para a câmera com o flash ligado, não esquece de manter os
-						olhos abertos</p>
-				</div>
-			</div>
-
-			<div class="col-md-4 col-sm-4">
-				<div class="features-content">
-					<span class="box1"><span aria-hidden="true" class="icon-upload"></span></span>
-					<h3>Faça o envio da fotografia</h3>
-					<p>Faça o envio da fotografia nesta página para realizar uma análise pelo sistema de reconhecimento
-					</p>
-				</div>
-			</div>
-
-			<div class="col-md-4 col-sm-4">
-				<div class="features-content">
-					<span class="box1"><span aria-hidden="true" class="icon-search"></span></span>
-					<h3>Veja os resultados</h3>
-					<p>Agora é aguardar o resultado, mas lembre-se que
-						somente um exame feito por um especialista pode diagnosticar com precisão a doença</p>
-				</div>
-			</div>
-
-		</div>
-	</section>
-
-	<section class="counter">
-		<div class="container">
-			<div class="col-md-4 col-sm-4">
-				<div class="counter-text">
-					<span aria-hidden="true" class="icon-profile-male"></span>
-					<h3>14000+</h3>
-					<p>Casos por ano no Brasil</p>
-				</div>
-			</div>
-
-			<div class="col-md-4 col-sm-4">
-				<div class="counter-text">
-					<span class="box1"><span aria-hidden="true" class="icon-sad"></span></span>
-					<h3>>1</h3>
-					<p>Afeta crianças maiores de 1 ano</p>
-				</div>
-			</div>
-
-			<div class="col-md-4 col-sm-4">
-				<div class="counter-text">
-					<span class="box1"><span aria-hidden="true" class="icon-presentation"></span></span>
-					<h3>90%</h3>
-					<p>Índice de Cura com Prognóstico</p>
-				</div>
+		<div class="col-md-4 col-sm-4">
+			<div class="features-content">
+				<span class="box1"><span aria-hidden="true" class="icon-upload"></span></span>
+				<h3>Faça o envio da fotografia</h3>
+				<p>Faça o envio da fotografia nesta página para realizar uma análise pelo sistema de reconhecimento
+				</p>
 			</div>
 		</div>
-	</section>
 
-	<section class="jobs">
-		<div class="container">
-			<div class="row heading">
-				<h2>Tecnologias Utilizadas</h2>
+		<div class="col-md-4 col-sm-4">
+			<div class="features-content">
+				<span class="box1"><span aria-hidden="true" class="icon-search"></span></span>
+				<h3>Veja os resultados</h3>
+				<p>Agora é aguardar o resultado, mas lembre-se que
+					somente um exame feito por um especialista pode diagnosticar com precisão a doença</p>
 			</div>
-			<div class="companies">
-				<div class="company-list">
-					<div class="row">
-						<div class="col-md-2 col-sm-2">
-							<div class="company-logo">
-								<img src="media/python.png" class="img-responsive" alt="" />
-							</div>
+		</div>
+
+	</div>
+</section>
+
+<section class="counter">
+	<div class="container">
+		<div class="col-md-4 col-sm-4">
+			<div class="counter-text">
+				<span aria-hidden="true" class="icon-profile-male"></span>
+				<h3>14000+</h3>
+				<p>Casos por ano no Brasil</p>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-sm-4">
+			<div class="counter-text">
+				<span class="box1"><span aria-hidden="true" class="icon-sad"></span></span>
+				<h3>>1</h3>
+				<p>Afeta crianças maiores de 1 ano</p>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-sm-4">
+			<div class="counter-text">
+				<span class="box1"><span aria-hidden="true" class="icon-presentation"></span></span>
+				<h3>90%</h3>
+				<p>Índice de Cura com Prognóstico</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="jobs">
+	<div class="container">
+		<div class="row heading">
+			<h2>Tecnologias Utilizadas</h2>
+		</div>
+		<div class="companies">
+			<div class="company-list">
+				<div class="row">
+					<div class="col-md-2 col-sm-2">
+						<div class="company-logo">
+							<img src="media/python.png" class="img-responsive" alt="" />
 						</div>
-						<div class="col-md-10 col-sm-10">
-							<div class="company-content">
-								<h3>Python 3<a href="https://www.python.org/doc/" target="_blank"><span
-											class="freelance">Documentação</span></h3>
-								<p><span class="company-location"><i class="fa fa-map-marker"></i>Linguagem de
-										programação utilizada no desenvolvimento</span><span class="package"></p>
-							</div>
+					</div>
+					<div class="col-md-10 col-sm-10">
+						<div class="company-content">
+							<h3>Python 3<a href="https://www.python.org/doc/" target="_blank"><span
+										class="freelance">Documentação</span></h3>
+							<p><span class="company-location"><i class="fa fa-map-marker"></i>Linguagem de
+									programação utilizada no desenvolvimento</span><span class="package"></p>
 						</div>
 					</div>
 				</div>
+			</div>
 
-				<div class="company-list">
-					<div class="row">
-						<div class="col-md-2 col-sm-2">
-							<div class="company-logo">
-								<img src="media/opencv.png" class="img-responsive" alt="" />
-							</div>
+			<div class="company-list">
+				<div class="row">
+					<div class="col-md-2 col-sm-2">
+						<div class="company-logo">
+							<img src="media/opencv.png" class="img-responsive" alt="" />
 						</div>
-						<div class="col-md-10 col-sm-10">
-							<div class="company-content">
-								<h3>OpenCV<a href="https://docs.opencv.org/4.x/" target="_blank"><span
-											class="freelance">Documentação</span></h3>
-								<p><span class="company-location"><i class="fa fa-map-marker"></i>Biblioteca utilizada
-										para o processamento de imagens</span><span class="package"></p>
-							</div>
+					</div>
+					<div class="col-md-10 col-sm-10">
+						<div class="company-content">
+							<h3>OpenCV<a href="https://docs.opencv.org/4.x/" target="_blank"><span
+										class="freelance">Documentação</span></h3>
+							<p><span class="company-location"><i class="fa fa-map-marker"></i>Biblioteca utilizada
+									para o processamento de imagens</span><span class="package"></p>
 						</div>
 					</div>
 				</div>
+			</div>
 
-				<div class="company-list">
-					<div class="row">
-						<div class="col-md-2 col-sm-2">
-							<div class="company-logo">
-								<img src="media/postgres.png" class="img-responsive" alt="" />
-							</div>
+			<div class="company-list">
+				<div class="row">
+					<div class="col-md-2 col-sm-2">
+						<div class="company-logo">
+							<img src="media/postgres.png" class="img-responsive" alt="" />
 						</div>
-						<div class="col-md-10 col-sm-10">
-							<div class="company-content">
-								<h3>PostgreSQL<a href="https://www.postgresql.org/docs/" target="_blank"><span
-											class="freelance">Documentação</span></h3>
-								<p><span class="company-location"><i class="fa fa-map-marker"></i>Banco de dados
-										utilizado no sistema</span><span class="package"></p>
-							</div>
+					</div>
+					<div class="col-md-10 col-sm-10">
+						<div class="company-content">
+							<h3>PostgreSQL<a href="https://www.postgresql.org/docs/" target="_blank"><span
+										class="freelance">Documentação</span></h3>
+							<p><span class="company-location"><i class="fa fa-map-marker"></i>Banco de dados
+									utilizado no sistema</span><span class="package"></p>
 						</div>
 					</div>
 				</div>
+			</div>
 
-				<div class="company-list">
-					<div class="row">
-						<div class="col-md-2 col-sm-2">
-							<div class="company-logo">
-								<img src="media/docker.png" class="img-responsive" alt="" />
-							</div>
+			<div class="company-list">
+				<div class="row">
+					<div class="col-md-2 col-sm-2">
+						<div class="company-logo">
+							<img src="media/docker.png" class="img-responsive" alt="" />
 						</div>
-						<div class="col-md-10 col-sm-10">
-							<div class="company-content">
-								<h3>Docker<a href="https://docs.docker.com/" target="_blank"><span
-											class="freelance">Documentação</span></a></h3>
-								<p><span class="company-location"><i class="fa fa-map-marker"></i>Tecnologia utilizada
-										para conteinerização do projeto</span><span class="package"></p>
-							</div>
+					</div>
+					<div class="col-md-10 col-sm-10">
+						<div class="company-content">
+							<h3>Docker<a href="https://docs.docker.com/" target="_blank"><span
+										class="freelance">Documentação</span></a></h3>
+							<p><span class="company-location"><i class="fa fa-map-marker"></i>Tecnologia utilizada
+									para conteinerização do projeto</span><span class="package"></p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-
-	<!-- footer start -->
-	<footer>
-		<div class="copy-right">
-			Desenvolvido por <a href="https://www.linkedin.com/in/gabriel-orbeli-436815171/" target="_blank">
-				Gabriel Orbeli</a>
-		</div>
-	</footer>
-
-	<script type="text/javascript" src="static/js/jquery.min.js"></script>
-	<script src="static/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="static/js/owl.carousel.min.js"></script>
-	<script src="static/js/bootsnav.js"></script>
-	<script src="static/js/main.js"></script>
-</body>
-
-</html>
+	</div>
+</section>
+{% endblock %}
