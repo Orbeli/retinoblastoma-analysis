@@ -1,5 +1,5 @@
 import os
-
+from project import web_routes, static_routes
 from werkzeug.utils import secure_filename
 from flask import (
     Flask,
@@ -16,6 +16,17 @@ app = Flask(__name__)
 app.config.from_object("project.config.Config")
 db = SQLAlchemy(app)
 
+# Web Routes
+app.add_url_rule('/', view_func=web_routes.home)
+app.add_url_rule('/analysis', view_func=web_routes.analysis)
+
+# Static Routes
+app.add_url_rule('/static/css/<path:filename>',
+                 view_func=static_routes.static_css_files)
+app.add_url_rule('/static/js/<path:filename>',
+                 view_func=static_routes.static_js_files)
+app.add_url_rule('/media/<path:filename>', view_func=static_routes.media_files)
+
 
 class User(db.Model):
     __tablename__ = "users"
@@ -26,33 +37,6 @@ class User(db.Model):
 
     def __init__(self, email):
         self.email = email
-
-
-@app.route("/", methods=["GET"])
-def home():
-    return render_template("index.html")
-
-
-@app.route("/analysis", methods=["GET"])
-def analysis():
-    return render_template("analysis.html")
-
-
-# Static Routes
-@app.route("/static/css/<path:filename>")
-def static_css_files(filename):
-    return send_from_directory(app.config["STATIC_CSS"], filename)
-
-
-# Static Routes
-@app.route("/static/js/<path:filename>")
-def static_js_files(filename):
-    return send_from_directory(app.config["STATIC_JS"], filename)
-
-
-@app.route("/media/<path:filename>")
-def media_files(filename):
-    return send_from_directory(app.config["MEDIA_FOLDER"], filename)
 
 
 @app.route("/upload", methods=["GET", "POST"])
