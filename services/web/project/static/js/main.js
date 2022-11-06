@@ -53,7 +53,7 @@ $(document).ready(function (e) {
             success:function(data){
 				if (Object.hasOwn(data, 'percent_variation')) {
 					msg = getMessage(data.percent_variation)
-					alertify.alert(msg);
+					alertify.alert('Resultado', msg)
 				} else {
 					alertify.error('Erro ao processar imagem');
 					console.log(data);
