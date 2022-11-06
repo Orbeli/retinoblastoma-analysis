@@ -17,6 +17,8 @@
 
     <!-- All Plugin Css -->
     <link rel="stylesheet" href="{{ url_for('static_css_files', filename='plugins.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static_css_files', filename='alertify.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static_css_files', filename='default.min.css') }}">
 
     <!-- Style & Common Css -->
     <link rel="stylesheet" href="{{ url_for('static_css_files', filename='common.css') }}">
@@ -36,7 +38,12 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="{{ url_for('home') }}"><img src="{{ url_for('media_files', filename='logo.png') }}" class="logo" alt=""></a>
+                <a class="navbar-brand" href="{{ url_for('home') }}">
+                    <div class="caption">
+                        <!-- <h2>Análise Retinoblastoma</h2> -->
+                    </div>
+                </a>
+                <!-- <a class="navbar-brand" href="{{ url_for('home') }}"><img src="{{ url_for('media_files', filename='logo.png') }}" class="logo" alt="">RETINOBLASTOMA</a> -->
             </div>
             <!-- End Header Navigation -->
 
@@ -52,7 +59,7 @@
     <!-- Navigation End  -->
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <section class="main-banner" style="background:#242c36 url(media/primo_do_je.jpg) no-repeat">
+    <section class="main-banner" style="background:#337989  url(media/ssss.jpg) no-repeat">
         <div class="container">
             <div class="caption">
                 <h2>RETINOBLASTOMA</h2>
@@ -78,6 +85,7 @@
     <script src="{{ url_for('static_js_files', filename='bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static_js_files', filename='owl.carousel.min.js') }}"></script>
     <script src="{{ url_for('static_js_files', filename='bootsnav.js') }}"></script>
+    <script src="{{ url_for('static_js_files', filename='alertify.min.js') }}"></script>
     <script src="{{ url_for('static_js_files', filename='main.js') }}"></script>
 </body>
 

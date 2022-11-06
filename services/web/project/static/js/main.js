@@ -22,3 +22,47 @@ $(".file_remove").on("click", function (e) {
 	btnOuter.removeClass("file_uploading");
 	btnOuter.removeClass("file_uploaded");
 });
+
+$(document).ready(function (e) {
+	function getMessage(variation) {
+		// menor que 30
+		if (variation <= 30)
+			msg = "Baixa probabilidade de possuir sintomas do retinoblastoma"
+		// entre 30 e 60
+		if (variation > 30 && variation <= 60)
+			msg = "Existe a possibilidade de possuir os sintomas do retinoblastoma, recomendamos um diagnóstico mais preciso com um médico"
+		// maior que 60
+		if (variation > 60)
+			msg = "Alta probabilidade de possuir os sintomas do retinoblastoma, recomendamos realizar uma consulta com um médico"
+
+		return msg;
+	  }
+
+    $('#imageUploadForm').on('submit',(function(e) {
+        e.preventDefault();
+        var formData = new FormData(this);
+		alertify.set('notifier','position', 'top-right');
+
+        $.ajax({
+            type:'POST',
+            url: $(this).attr('action'),
+            data:formData,
+            cache:false,
+            contentType: false,
+            processData: false,
+            success:function(data){
+				if (Object.hasOwn(data, 'percent_variation')) {
+					msg = getMessage(data.percent_variation)
+					alertify.alert(msg);
+				} else {
+					alertify.error('Erro ao processar imagem');
+					console.log(data);
+				}
+            },
+            error: function(data){
+                alertify.error('Erro ao processar imagem, lembre-se de enviar a foto do rosto, com os olhos abertos em um local bem iluminado');
+                console.log(data);
+            },
+        });
+    }));
+});

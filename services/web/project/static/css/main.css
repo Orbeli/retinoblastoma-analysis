@@ -70,7 +70,7 @@ border-top: solid 5px #da0833 !important;
 .main-banner{
 background-size:cover !important;
 background-position:center !important;
-padding:14% 0;
+padding:9% 0;
 position:relative;
 text-align:center;
 color:#ffffff;
@@ -80,7 +80,7 @@ margin:0;
 position:relative;
 }
 .main-banner h2{
-color:#c4bd4e;
+color:#ffffff;
 font-weight:400;
 display: block;
  margin-bottom: 25px;
@@ -712,7 +712,7 @@ background: #ef183c;
 }
 /*-----------------------counter Section start-------------------------*/
 .counter{
-background:#da0833;
+background:#337989;
 padding:60px 0;
 }
 

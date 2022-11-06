@@ -34,12 +34,12 @@
 		</div>
 	</div>
 </section>
-<form action="{{ url_for('upload_file') }}" method=post enctype=multipart/form-data>
+<form action="{{ url_for('upload_file') }}" id="imageUploadForm" method=post enctype=multipart/form-data id>
 	<div class="container">
 		<div class="panel">
 			<div class="button_outer">
 				<div class="btn_upload">
-					<input type="file" id="upload_file" name="" accept="image/*" />
+					<input type="file" id="upload_file" name="file" accept="image/*" />
 					Selecionar Imagem
 				</div>
 				<div class="processing_bar"></div>
@@ -49,6 +49,7 @@
 		<div class="error_msg"></div>
 		<div class="uploaded_file_view" id="uploaded_view">
 			<span class="file_remove">X</span>
+			<input type=submit class="file_remove" style="right: auto;" value=Ok>
 		</div>
 	</div>
 </form>

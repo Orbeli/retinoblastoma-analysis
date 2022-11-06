@@ -11,3 +11,4 @@ class Config(object):
     STATIC_CSS = f"{os.getenv('APP_FOLDER')}/project/static/css"
     STATIC_JS = f"{os.getenv('APP_FOLDER')}/project/static/js"
     MEDIA_FOLDER = f"{os.getenv('APP_FOLDER')}/project/media"
+    HAARCASCADE = f"{os.getenv('APP_FOLDER')}/project/haarcascade"

@@ -17,3 +17,13 @@ class User(db.Model):
 
     def __init__(self, email):
         self.email = email
+
+
+class Image(db.Model):
+    __tablename__ = "images"
+
+    id = db.Column(db.Integer, primary_key=True)
+    imagem = db.Column(db.String(), unique=True, nullable=False)
+
+    def __init__(self, imagem):
+        self.imagem = imagem
